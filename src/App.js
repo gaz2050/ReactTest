@@ -14,6 +14,7 @@ import {
 function App() {
   return (
     <div>
+      <h1> TESTY</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/calculator" element={<Calculator />} />
