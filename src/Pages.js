@@ -62,7 +62,7 @@ export function Whoops404() {
   let location = useLocation();
   return (
     <div>
-      <h2>Wrong page idiot! There is no {location.pathname} </h2>
+      <h2>Wrong pages idiot! There is no {location.pathname} </h2>
     </div>
   );
 }

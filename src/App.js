@@ -1,31 +1,32 @@
-import React, { useReducer } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
-import {
-  Home,
-  Calculator,
-  Stopwatch,
-  PaceConverter,
-  RockPaperScissors,
-  LogonDB,
-  Whoops404,
-} from "./Pages";
+import React from "react";
+import { Route, Routes, Link } from "react-router-dom";
+import About from "./About";
+import Home from "./Home";
 
-function App() {
-  return (
-    <div>
-      <h1> TESTY</h1>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/calculator" element={<Calculator />} />
-        <Route path="/stopwatch" element={<Stopwatch />} />
-        <Route path="/paceconverter" element={<PaceConverter />} />
-        <Route path="/rockpaperscissors" element={<RockPaperScissors />} />
-        <Route path="/logon" element={<LogonDB />} />
-        <Route path="/*" element={<Whoops404 />} />
-      </Routes>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <div>
+          <nav>
+            <ul id="navigation">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/About.jsx">About...</Link>
+              </li>
+              <Routes>
+                <Route path="/welcome" element={<Home />} />
+                <Route path="/about" element={<About />} />
+              </Routes>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
